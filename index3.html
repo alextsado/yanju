@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Giving global top talent opportunity to discover and work virtually or invest in exciting African businesses.">
+    <meta name="author" content="Alexander Tsado">
+    <link rel="icon" href="imgs/YanjuIco.PNG">
+
+    <title>Yanju - Growing African Businesses</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template
+    <link href="theme.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style media="screen" type="text/css">
+
+  .navbar-nav {
+    width: 90%;
+    text-align: center;
+  }
+
+   .navbar-nav > li > a {color: silver;}
+   .navbar-nav  > li {
+      float: none;
+      display: inline-block;
+    }
+
+   .navbar-toggle .icon-bar { background-color: #888 !important;}
+   .navbar-toggle {border: 1px solid grey !important;}
+
+ #bgimg{ z-index:-1; position:fixed; top:0px; left:0px; -webkit-filter: brightness(50%); /* Safari 6.0 - 9.0 */
+    filter: brightness(50%); color:white; height: 100%;}
+  .navbar {    background-color: transparent; border-bottom: 1px solid grey;}
+
+  @media all and  (min-width: 0px) and (max-width: 690px)  {
+   .navbar-nav  > li {
+      position: relative;
+      display: block !important;
+      text-align:left !important;
+    }
+
+    .pull-right{float: none !important;}
+  }
+
+  </style>
+
+  </head>
+
+  <body >
+
+    <nav class="navbar" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" onclick="load('home');"><img src="imgs/logo1.PNG" height = 30/></a> 
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" >
+            <li class="" class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#whywedothis" onclick="load('home');">Why Yanju Exists</a></li>
+                <li><a href="#examples" onclick="load('home');">Success Stories</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#postsSection" onclick="load('posts')">All Projects</a></li>
+                <li><a href="#postsSection" onclick="load('myposts')">My Projects</a></li>
+                <li><a href="#"  onclick="load('createpost')">Create Project</a></li>
+                <li><a href="#"  onclick="load('howtopostproject')">How to post project</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professionals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('allconsultants')">All Professionals</a></li>
+                <li><a href="#" onclick="">How to consult (coming soon)</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why consult on Yanju?</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Businesses<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('orgs')">All Businesses</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why be a business with Yanju? </a></li>
+              </ul>
+            </li>
+	    <li><a href="mailto:alextsado@gmail.com?Subject=Suggestion%20For%20Yanju" target="_top">Feedback</a></li>
+            <li><a href="#contact" onclick="load('blog')">Blog</a></li> 
+
+	    <li class="pull-right"><a href="#" id="btnLogin" onclick="displayLogin();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    <li class="pull-right"><a href="#" id="btnSignup" onclick="displaySignup(); //load('signup')"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+
+
+
+            <li class="dropdown pull-right">
+              <a href="" class="dropdown-toggle hide" id="welcomeArea" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('profile')">My Profile</a></li>
+                <li><a href="#" onclick="resetPassword()">Reset Password</a></li>
+	        <li><a id="btnLogout" class="hide c1">  Log out</a></li> 
+              </ul>
+            </li>
+         
+          </ul>
+        </div>
+
+	
+    </nav>
+
+<!--
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" onclick="load('home');"><img src="imgs/logo1.PNG" height = 30/></a>
+        </div>
+    <div class="collapse navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Stories</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Photos</a></li>
+        <li class="social pull-right"><a href="#">Social Links</a></li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+<nav class="navbar" role="navigation">
+  <div class="container-fluid">
+        <div class="navbar-header pull-left">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" onclick="load('home');"><img src="imgs/logo1.PNG" height = 30/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" >
+            <li class="" class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#whywedothis" onclick="load('home');">Why Yanju Exists</a></li>
+                <li><a href="#examples" onclick="load('home');">Success Stories</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#postsSection" onclick="load('posts')">All Projects</a></li>
+                <li><a href="#postsSection" onclick="load('myposts')">My Projects</a></li>
+                <li><a href="#"  onclick="load('createpost')">Create Project</a></li>
+                <li><a href="#"  onclick="load('howtopostproject')">How to post project</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professionals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('allconsultants')">All Professionals</a></li>
+                <li><a href="#" onclick="">How to consult (coming soon)</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why consult on Yanju?</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Businesses<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('orgs')">All Businesses</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why be a business with Yanju? </a></li>
+              </ul>
+            </li>
+	    <li><a href="mailto:alextsado@gmail.com?Subject=Suggestion%20For%20Yanju" target="_top">Feedback</a></li>
+            <li><a href="#contact" onclick="load('blog')">Blog</a></li> 
+	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+	    <li><a href="#" id="btnLogin" onclick="displayLogin();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    <li><a href="#" id="btnSignup" onclick="displaySignup(); //load('signup')"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+
+
+            <li class="dropdown social">
+              <a href="" class="dropdown-toggle hide" id="welcomeArea" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('profile')">My Profile</a></li>
+                <li><a href="#" onclick="resetPassword()">Reset Password</a></li>
+	        <li><a id="btnLogout" class="hide c1">  Log out</a></li> 
+              </ul>
+            </li>
+         
+          </ul>
+	</div>
+  </div>
+</nav>
+-->
+<img src="imgs/diversity1.jpg" id="bgimg"/>
+
+<h1 style="margin:auto">YANjU</h1>
+   <footer class="footer navbar navbar-inverse navbar-fixed-bottom" style="padding-top: 10px;">
+      <div class="container">
+        <span class="text-muted c1" >&copy; Yanju 2017.  Solutions generated: <b id="metricA" style="color:white">4</b> Profiled Professionals: <b id="metricB" style="color:white">3</b>     <img src="imgs/kellogg.png" width=60 style="float:right"/> <img src="imgs/socialimpact.png" width=60 style="float:right"/></span>
+      </div>
+    </footer>
+
+<!--
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" onclick="load('home');">Yanju</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" >
+            <li class="" class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#whywedothis" onclick="load('home');">Why Yanju Exists</a></li>
+                <li><a href="#examples" onclick="load('home');">Success Stories</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#postsSection" onclick="load('posts')">All Projects</a></li>
+                <li><a href="#postsSection" onclick="load('myposts')">My Projects</a></li>
+                <li><a href="#"  onclick="load('createpost')">Create Project</a></li>
+                <li><a href="#"  onclick="load('howtopostproject')">How to post project</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Professionals<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('allconsultants')">All Professionals</a></li>
+                <li><a href="#" onclick="">How to consult (coming soon)</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why consult on Yanju?</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Businesses<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('orgs')">All Businesses</a></li>
+                <li><a href="#homeWhatYouGet" onclick="load('home')">Why be a business with Yanju? </a></li>
+              </ul>
+            </li>
+	    <li><a href="mailto:alextsado@gmail.com?Subject=Suggestion%20For%20Yanju" target="_top">Feedback</a></li>
+            <li><a href="#contact" onclick="load('blog')">Blog</a></li> 
+	  </ul>
+          <ul class="nav navbar-nav navbar-right">
+	    <li><a href="#" id="btnLogin" onclick="displayLogin();"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	    <li><a href="#" id="btnSignup" onclick="displaySignup(); //load('signup')"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+
+
+
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle hide" id="welcomeArea" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" onclick="load('profile')">My Profile</a></li>
+                <li><a href="#" onclick="resetPassword()">Reset Password</a></li>
+	        <li><a id="btnLogout" class="hide c1">  Log out</a></li> 
+              </ul>
+            </li>
+         
+          </ul>
+        </div>
+
+	
+    </nav>
+-->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/ajaxupload.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
+
+<!--
+
+<div id="markCompleteModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+	<span class="closeBtn" onclick="closeMarkComplete()">X</span>
+      <h2>Mark Complete</h2>
+
+    </div>
+    <div class="modal-body">
+    
+
+ 	 <div class="form-group">
+
+       	<label for="consultant">Consultant Email</label>
+    
+	<input type="text" name="consultant" id="consultant" placeholder="Consultant Name" class="form-control"/>
+  
+	</div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="solution">Summarize solution for future reference</label>
+    
+     	   <textarea name="solution" id="solution" class="form-control"></textarea>
+  
+ 	 </div>
+
+ 	 <div class="form-group">
+
+       	<label for="rating">Consultant Rating</label>
+   
+	 <input id="rating" type ="range" min ="0" max="5" step ="1" value ="3" onchange="printValue('rating','ratingVal')"/>
+	 <input id="ratingVal" type ="text" disabled/>
+         <input id="key" type ="text" class="hide"/>
+	 </div>
+
+ 	<button type="submit" class="btn btn-success" onclick="completePost()">Submit</button>
+ 	<button type="submit" class="btn" onclick="closeMarkComplete()">Cancel</button>
+	
+    </div>
+  </div>
+
+</div>
+
+
+<div id="signupModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+	<span class="closeBtn" onclick="closeSignup()">X</span>
+      <h2>Signup</h2>
+
+    </div>
+    <div class="modal-body">
+    
+
+      <div class="form-group">
+ 
+	<label>First and Last Name</label>
+       	<input id="signName" type="email" placeholder="Name" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Username/ Email</label>
+       	<input id="signEmail" type="email" placeholder="Email" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Password</label>
+	<input id="signPassword" type="password" placeholder="Password" aria-describedby="passwordHelpBlock" class="form-control"/>
+	<p id="passwordHelpBlock" class="form-text text-muted">
+  	  Your password must be at least 6 characters long and must not contain spaces, special characters, or emoji.
+	</p>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Re-enter Password</label>
+	<input id="signPasswordCheck" type="password" placeholder="Re-enter Password" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>How did you hear about Yanju?</label>
+       	<input id="howyouheard" type="email" placeholder="Friend, Google Search, Mentor?" class="form-control"/>
+      </div>
+	</br>
+        <button id="btnSignup" class="btn btn-success" onclick="signUp()">Sign up</button>
+ 	<button type="submit" class="btn" onclick="closeSignup()">Cancel</button>
+	
+	<p style="color:red;" id="errorMsg"></p>
+	
+    </div>
+  </div>
+
+</div>
+
+
+<div id="loginModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+	<span class="closeBtn" onclick="closeLogin()">X</span>
+      <h2>Login</h2>
+
+    </div>
+    <div class="modal-body">
+    
+
+      <div class="form-group">
+ 
+	<label>Email/ Username</label>
+       	<input id="txtEmail" type="email" placeholder="Email" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Password</label>
+       	<input id="txtPassword" type="password" placeholder="Password" class="form-control"/>
+      </div>
+
+	</br>
+        <button id="" class="btn btn-success" onclick="login()">Login</button>
+ 	<button type="submit" class="btn" onclick="closeLogin()">Cancel</button> <br/>
+	<a href="#" onclick="resetPassword()">Reset Password</a>
+	<a href="#" onclick="displaySignup()">Sign Up Page</a>
+	
+	<p style="color:red;" id="errorMsg"></p>
+	
+    </div>
+  </div>
+
+</div>
+
+-->
+  </body>
+</html>

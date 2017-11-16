@@ -1,0 +1,126 @@
+<div style="margin:auto 20%; padding-bottom:80px;">
+   
+
+      <form id="form1" runat="server">
+        <input type='file' id="imgInp" />
+        <img id="blah" src="#" alt="your image" />
+      </form> <br/>
+
+      <div class="form-group">
+ 
+	<label>First and Last Name</label>
+       	<input id="signName" type="email" placeholder="Name" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Username/ Email</label>
+       	<input id="signEmail" type="email" placeholder="Email" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="origin">Country of Origin</label>
+    
+     	   <textarea name="origin" id="origin" class="form-control"></textarea>
+  
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="school">School Affiliation</label>
+    
+     	   <textarea name="school" id="school" class="form-control"></textarea>
+  
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="school">Company Affiliation</label>
+    
+     	   <textarea name="work" id="work" class="form-control"></textarea>
+  
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="plinkedin">Your LinkedIn URL</label>
+    
+     	   <input name="plinkedin" id="plinkedin" class="form-control"/>
+  
+      </div>
+
+      <div class="form-group">
+ 
+	<b>Will you be a consultant? </b><br/>
+	<label class="switch">
+	  <input type="checkbox" id="consultantToggle">
+	  <span class="slider round"></span>
+	</label>
+      </div>
+     <div id="selectPrefs" class="hide">
+	Rank your preference based on your expertise
+      <div class="form-group">
+ 
+       	   <label for="pref1">Preference 1</label>
+   
+    	   <select id="pref1" name="pref1">
+	      <option value="Business Plan">Business Plan</option>
+      	      <option value="Pitch Deck">Pitch Deck</option>
+  	      <option value="Market Plan">Market Plan</option>
+ 	      <option value="Finance/Accounting">Finance/ Accouting</option> 
+    	   </select> <br> 
+      </div>
+
+      <div class="form-group">
+ 
+       	   <label for="pref2">Preference 2</label>
+   
+    	   <select id="pref2" name="pref2">
+	      <option value="Business Plan">Business Plan</option>
+      	      <option value="Pitch Deck">Pitch Deck</option>
+  	      <option value="Market Plan">Market Plan</option>
+ 	      <option value="Finance/Accounting">Finance/ Accouting</option> 
+    	   </select> <br> 
+      </div>
+
+      <div class="form-group">
+ 
+       	   <label for="pref3">Preference 3</label>
+   
+    	   <select id="pref3" name="pref3">
+
+    	   </select> <br> 
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="bio">Short Bio</label>
+    
+     	   <textarea name="bio" id="bio" class="form-control"></textarea>
+  
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="yanjureason">What will you get out of this?</label>
+    
+     	   <textarea name="yanjureason" id="yanjureason" class="form-control"></textarea>
+  
+      </div>
+
+      <div class="form-group">
+    
+       	   <label for="projectreason">Why will you pick one project over another in your expertise?</label>
+    
+     	   <textarea name="projectreason" id="projectreason" class="form-control"></textarea>
+  
+      </div>
+     </div>
+
+        <button id="btnUpdateProfile" class="btn btn-success" onclick="updateProfile()">Update Profile</button>
+	<button type="submit" class="btn btn-secondary" onclick="load('home')">Back home</button>
+
+
+
+</div>

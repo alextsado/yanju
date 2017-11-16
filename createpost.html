@@ -1,0 +1,109 @@
+<div style="margin:auto 20%; padding-bottom:120px;">
+   
+<!--pre populate company if it's exhisting-->
+
+	  <div class="form-group">
+    
+	    <label for="cName">Company Name</label>
+    
+	    <input type="text" name="cName" id="cName" placeholder="Company Name" class="form-control"/>
+  
+	  </div>
+
+	 <div class="form-group">
+  
+       	   <label for="cIndustry">Industry</label>
+    
+    	   <select id="cIndustry" name="cIndustry">
+
+    	   </select> <br> 
+	 </div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="cMission">Company Mission</label>
+<br/>    
+     	   <textarea name="cMission" id="cMission" style="width:100%; color:black" placeholder="What is your company's main goal in one sentence?"></textarea>
+  
+ 	 </div>
+
+	  <div class="form-group">
+    
+	    <label for="cWeb">Company Website</label>
+    
+	    <input type="text" name="cWeb" id="cWeb" placeholder="Company Website" class="form-control"/>
+  
+	  </div>
+
+	  <div class="form-group">
+    
+	    <label for="cBac">Company Background</label>
+    
+	    <input type="text" name="cBac" id="cBac" placeholder="Company Background" aria-describedby="backgroundHelpBlock" class="form-control"/>
+  
+	    <p id="backgroundHelpBlock" class="form-text text-muted" style="color:wheat">
+  	       Enter answers like - how old is your company, how many workers, how much is estimated annual revenue (currency), something big and recent like Venture fund raised?
+	    </p>
+	  </div>
+<hr>
+
+	  <div class="form-group">
+    
+	    <label for="title">Project Title</label>
+    
+    		<input type="text" name="title" id="title" placeholder="Title" class="form-control"/>
+  
+	  </div>
+
+<!--	 <div class="form-group">
+    
+       	   <label for="category">Problem Category</label>
+  
+    	   <select id="category" name="category">
+	      <option value="Business Plan">Business Plan</option>
+      	      <option value="Pitch Deck">Pitch Deck</option>
+  	      <option value="Market Plan">Market Plan</option>
+ 	      <option value="Finance/Accounting">Finance/ Accouting</option>
+    	   </select> <br> 
+	 </div>
+-->
+	 <div class="form-group">
+  
+       	   <label for="category">Problem Category</label>
+    
+    	   <select id="category" name="category">
+
+    	   </select> <br> 
+	 </div>
+
+	 <div class="form-group">
+  
+       	   <label for="country">Country</label>
+    
+    	   <select id="country" name="country">
+
+    	   </select> <br> 
+	 </div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="description">Project/ Problem Description</label>
+ <br/>
+           <span>(Include at least one sentence that clearly states what you want to achieve in your first 1 hour conversation)</span>   
+     	   <textarea name="description" id="description" placeholder="Make the problem exciting by describing how solving it will impact you or your customers. Post a link to your website too" class="form-control"></textarea>
+  
+ 	 </div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="usrEmail">Contact Email</label>
+    
+	   <input type="text" name="usrEmail" id="usrEmail" placeholder="Contact Email" class="form-control"/>
+  
+ 	 </div>
+ 	 <button type="submit" class="btn btn-success" onclick="createPost()">Submit</button>
+	 <button type="submit" class="btn btn-secondary" onclick="load('posts')">Back to projects</button>
+	
+ 
+
+</div>

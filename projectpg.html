@@ -1,0 +1,80 @@
+<div style="margin:auto 10%; padding-bottom:120px; background-color:white; color:black;">
+  <div style="background-color:#white" > 
+    <div id="pCategory" style="background-color:white; height:100%; width:150px; padding:10px; text-align:center; border: .5px #333 solid;">
+      Business Plan
+    </div>
+  </div>
+
+  <div style="float:left; margin:15px">
+    Views: <em id="views"></em>
+  </div>
+
+  <div style="float:right; margin:15px;">
+    <a class="pLinks" href="#postsSection" onclick="load('posts')">Back To Posts</a>
+  </div>
+  <div id="pHeader" style=" margin: 30px; text-align:center;">
+     <h2 style="margin-bottom: 0px; ">Revisiting Business Model</h2><br/>
+     <span style="">By Ken Kinyanjui, with Faidika in Kenya</span><br/>
+     <span style=""><i>September 26, 2017</i></span>
+  </div>
+
+  <div style="padding:15px;">
+    <b>Problem Statement</b><br/>
+    <p id="pDescription" style="margin-bottom:20px;"> <br/>
+	--	
+    </p>
+
+    <b>Company Background</b><br/>
+    <p id="pBackground" style="margin-bottom:20px;"> <br/>
+	--
+    </p>
+  </div>
+  <center id="pButtons">
+
+  </center>
+
+</div>
+
+
+<div id="markCompleteModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>Mark Complete</h2>
+    </div>
+    <div class="modal-body">
+    
+
+ 	 <div class="form-group">
+
+       	<label for="consultant">Consultant Email</label>
+    
+	<input type="text" name="consultant" id="consultant" placeholder="Consultant Name" class="form-control"/>
+  
+	</div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="solution">Summarize solution for future reference</label>
+    
+     	   <textarea name="solution" id="solution" class="form-control"></textarea>
+  
+ 	 </div>
+
+ 	 <div class="form-group">
+
+       	<label for="rating">Consultant Rating</label>
+   
+	 <input id="rating" type ="range" min ="0" max="5" step ="1" value ="3" onchange="printValue('rating','ratingVal')"/>
+	 <input id="ratingVal" type ="text" disabled/>
+         <input id="key" type ="text" class="hide"/>
+	 </div>
+
+ 	<button type="submit" class="btn btn-success" onclick="completePost()">Submit</button>
+ 	<button type="submit" class="btn" onclick="closeMarkComplete()">Cancel</button>
+	
+    </div>
+  </div>
+
+</div>

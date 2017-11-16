@@ -1,0 +1,240 @@
+<html>
+<head>
+  <title>Yanju - Solve your Business Problems</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+ <link rel="stylesheet" type="text/css" href="css/app.css">
+
+<style>
+h1 {
+    color: orange;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    width:50%;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+a {cursor: pointer}
+.groove {border-bottom: groove;}
+
+.cell {width:80%; margin:0px auto; padding:10px;}
+
+.loginbox{}
+
+.stories{     border: 2px dashed;
+    border-radius: 15px 50px 30px;
+    -moz-border-radius: 15px 50px 30px;
+    -webkit-border-radius: 15px 50px 30px;
+    padding:10px;
+ }
+
+#home{background-image: url("imgs/woman-small-biz.jpg"); background-repeat: no-repeat; background-size: 100%; }
+#home_table{width: 80%; margin:20px auto; background-color:black; color: white; opacity:0.6; padding:20px;}
+
+.postlist {}
+
+</style>
+
+</head>
+
+<body>
+<!-- start header -->
+    <div class="mainheader navbar navbar-default" name="top">
+      <div class="container ">
+        <div class="navbar-header">
+          <div class="navbar-brand"><a href="#top" onclick="show('home')">Yanju</a></div>
+        </div>
+        <ul class="nav navbar-nav" >
+          <li><a href="#postsSection" onclick="show('posts')" style="color:white">Posts</a></li>
+          <li><a href="#postsSection" onclick="show('myposts')" style="color:white">My Work</a></li>
+          <li><a href="#whyPage" onclick="show('whypage')" style="color:white;">Why do this</a></li>
+        </ul>
+
+
+
+	  <p class="hide" id="welcomeArea" style="color:white; float:left"></p>
+	  <p class="container loginbox" id="loginBox">
+  	  <input id="txtEmail" type="email" placeholder="Email">
+  	  <input id="txtPassword" type="password" placeholder="Password">
+  	  <button id="btnLogin" class="btn btn-action">Log in</button>
+  	  <button id="btnSignup" class="btn btn-secondary">Sign up</button>
+	  </p> 
+	   &nbsp;&nbsp;&nbsp; <a id="btnLogout" class="hide">  Log out</a> 
+
+
+
+      </div>
+    </div>
+
+<!-- end header -->
+
+<div id="createPostModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Create Post</h2>
+    </div>
+    <div class="modal-body">
+
+	
+	  <div class="form-group">
+    
+	    <label for="cName">Company Name</label>
+    
+	    <input type="text" name="cName" id="cName" placeholder="Company Name" class="form-control"/>
+  
+	  </div>
+
+	  <div class="form-group">
+    
+	    <label for="title">Title</label>
+    
+    		<input type="text" name="title" id="title" placeholder="Title" class="form-control"/>
+  
+	  </div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="description">Description</label>
+    
+     	   <textarea name="description" id="description" class="form-control"></textarea>
+  
+ 	 </div>
+
+	 <div class="form-group">
+    
+    	   <select id="category" name="category">
+	      <option value="Business Plan">Business Plan</option>
+      	      <option value="Pitch Deck">Pitch Deck</option>
+  	      <option value="Market Plan">Market Plan</option>
+ 	      <option value="Finance/Accounting">Finance/ Accouting</option>
+    	   </select> <br> 
+	 </div>
+
+ 	 <div class="form-group">
+    
+       	   <label for="usrEmail">Contact Email</label>
+    
+	   <input type="text" name="usrEmail" id="usrEmail" placeholder="Contact Email" class="form-control"/>
+  
+ 	 </div>
+ 	 <button type="submit" class="btn btn-success" onclick="createPost()">Submit</button>
+	
+
+    </div>
+    <div class="modal-footer">
+      <h4>Use the description area to inform the consultant about your challenge. Make it easy to understand, but not very long. Utlize bullet points if you can</h4>
+    </div>
+  </div>
+
+</div>
+
+<div id="markCompleteModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Mark Complete</h2>
+    </div>
+    <div class="modal-body">
+    
+       	<label for="consultant">Consultant Name</label>
+    
+	<input type="text" name="consultant" id="consultant" placeholder="Consultant Name" class="form-control"/>
+  
+
+ 	<button type="submit" class="btn btn-success" onclick="completePost()">Submit</button>
+	
+    </div>
+  </div>
+
+</div>
+
+<a href="#top"><img id="uparrow" src="imgs/uparrow.png" style="position:fixed; top:92%; left:95%; width:20px; height:20px;"></a>
+
+<div id="home" name="home">
+ 
+   <table id="home_table">
+	<tr>  <h1><br>&nbsp; &nbsp; Creating meaningful connections for Impact</h1> <br><br></tr>
+	<tr><td rowspan=2>
+	     Sit in Chicago and help a business across the world in Cameroun double their sales! Or coach a fintech startup in Kenya to raise Venture capital money.<br> <br>
+	     To your right you'll read two inspiring stories of how young and seemingly inexperienced MBAs were able to dedicate one hour of their time to an African small business's problem, and provided a solution that yielded big results.</br></br> 
+             You can do it too. Scroll down to some interesting challenges faced by small businesses in Africa and see where you can help
+        </td>
+	<td><p class="stories">"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"</p></td>
+ 	  </tr>
+        <tr>
+ 	  <td><p class="stories">"lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"</p></td>
+	</tr>
+	<tr><td colspan=2><a href="#postsSection" alt="down arrow"><img src="imgs/down_arrow.png" width=200 height=200></a> <td></tr>
+   </table>
+
+
+
+<div id="whyPage" name="whyPage" style="display:none; height:100%">
+   <p>We believe we can change the world and improve people's lives through business, one small business solution at a time. Top 3 problems faced by startups in Africa are Access to capital, Access to mid-management talent for growth and Ability to negotiate favorable deals with institutions. With Yanju, we can address the talent problem and all enjoy a process of cross-learning and collaboration across borders to solve problems for small businesses </br></br>
+	So if you are a business student or professional, signup for an opportunity to learn about a new country, a new business, and see where your relationship takes you. You may only have a one-hour call with your client, or decide to book a flight to a beautiful new beach town you never thought of before to go grow a business that intrigues you. </br></br>
+        If you are a business in Africa, signup and post some of your challenges, so you get some of the best minds in the world to collaborate with you to develop solutions that specifically address your needs, amidsts the unique challenges of your environment. 
+   </p>
+</div>
+
+<div style="background-color:#fafad2;" name="postsSection" id="postsSection">
+
+<div style="width:70%; margin:10px auto; ">
+  <button id="createPostsBtn">Create Post</button>
+  <input type="text" style="width:40%;" id="searchText" placeholder="Search Posts"  />
+  <select id="searchCtr" name="searchCtr" style="width:150px;">
+	<option value='title'>Title/ Details</option>
+        <option value='owner'>Owner</option>
+        <option value='category'>Category</option>
+        <option value='date'> After Date</option>
+        <option value='cName'> Company Name</option>
+  </select> 
+  <button id="searchBtn">Search</button>
+</div>
+
+<div id="posts" >
+
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script></script>
+<script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>

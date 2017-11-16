@@ -1,0 +1,48 @@
+<div style="margin:auto 20%; padding-bottom:80px;">
+  <!--
+      <form id="form1" runat="server">
+        <input type='file' id="imgInp" />
+        <img id="blah" src="#" alt="your image" />
+      </form> <br/>
+   -->
+
+	<h1>Sign Up</h1>
+      <div class="form-group">
+ 
+	<label>First and Last Name</label>
+       	<input id="signName" type="email" placeholder="Name" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label> Email</label>
+       	<input id="signEmail" type="email" placeholder="Email" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Password</label>
+	<input id="signPassword" type="password" placeholder="Password" aria-describedby="passwordHelpBlock" class="form-control"/>
+	<p id="passwordHelpBlock" class="form-text text-muted" style="color:wheat">
+  	  Your password must be at least 6 characters long and must not contain spaces, special characters, or emoji.
+	</p>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>Re-enter Password</label>
+	<input id="signPasswordCheck" type="password" placeholder="Re-enter Password" class="form-control"/>
+      </div>
+
+      <div class="form-group">
+ 
+	<label>How did you hear about Yanju?</label>
+       	<input id="howyouheard" type="email" placeholder="Friend, Google Search, Mentor?" class="form-control"/>
+      </div>
+</br>
+        <button id="btnSignup" class="btn btn-success" onclick="signUp()">Sign up</button>
+	<button type="submit" class="btn btn-secondary" onclick="load('home')">Back home</button>
+	
+	<p style="color:red;" id="errorMsg"></p>
+
+</div>
